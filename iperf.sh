@@ -8,5 +8,5 @@
         touch $FILE2
         DATE=$(date '+%d/%m/%Y %H:%M:%S')
         echo $DATE
-        iperf3 -c "$TARGET" -p 20000 -t 6000 >> $FILE1 | iperf3 -c "$TARGET" -p 20001 -t 6000 -u >> $FILE2
+        iperf3 -c "$TARGET" -p 20000 -t 6000 -b 2M >> $FILE1 | iperf3 -c "$TARGET" -p 20001 -b 2M -t 6000 -u >> $FILE2
         
